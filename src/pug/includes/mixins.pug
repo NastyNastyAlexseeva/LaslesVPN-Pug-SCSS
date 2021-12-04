@@ -1,4 +1,8 @@
-mixin icon(name,mod)
-	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
-		use(xlink:href="/img/svg/sprite.svg#" + name)
+mixin statistic(svg, num, name)
+    - var svgName = svg;
+    .statistics__item
+        .statistics__image
+            img( src="img/svg/" + svgName + ".svg" alt="" + svgName)
+        span.statistics__num #{num}
+        span.statistics__name #{name}
+
