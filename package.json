@@ -29,6 +29,11 @@
   "dependencies": {
     "gulp-rename": "^1.4.0"
   },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "IE 10"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NastyNastyAlexseeva/LaslesVPN-Pug-SCSS.git"
