@@ -31,7 +31,6 @@
 
 Далее, используя ```cmd``` в Windows или Терминал Linux/macOS, проделайте следующие шаги:
 
-* Скачать сборку: ```git clone https://github.com/Berzeg07/build_gulp4.git```;
 * Ставим утилиту глобально ```$ npm install gulpjs/gulp-cli -g```;
 * Устанавливаем ```Gulp 4``` в папку с проектом ```$ npm install gulp --save-dev```;
 * Проверка версии gulp и чтобы убедиться, что все корректно установлено: ```gulp -
