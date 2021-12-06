@@ -18,6 +18,7 @@ global.$ = {
     gulp: require('gulp'),
     gp: require('gulp-load-plugins')(),
     bs: require('browser-sync').create(),
+    sass: require('gulp-sass')(require('sass')),
 
     path: {
         tasks: require('./gulp/config/tasks.js')
