@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $background-primary;
+    align-items: center;
+    padding: 37px 90px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: 149px;
+        height: 36.23px;
+    }
+
+    &__logo  {
+        img {
+        display: block;
+        max-width: 100%;
+        margin: 0;
+        }
+    }
+
+    &__menu {
+    margin-top: -6px;
+    }
+
+    &__menu--body {
+    display: flex;
+    align-items: center;
+    }
+
+    &__menu--list {
+        list-style-type: none;
+    }
+
+    &__menu--list { 
+        li {
+            display: inline-block;
+            font-size: $font-size-16;
+            margin: 0 10px;
+        }
+    }
+
+    &__menu--list {
+        li {
+            a {
+                display: block;
+                text-decoration: none;
+            }
+        } 
+    }
+
+    &__menu--link {
+        color: $text-color;
+        font-size: $font-size-16;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+
+    &__button {
+        width: 150px;
+        text-decoration: none;
+        color: $font-dark-color;
+        font-weight: $font-weight-500;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__button {
+        button-primary {    
+            text-decoration: none;
+            color: $red-color;
+            font-size: 16px;
+            border: 1px solid $red-color;
+            border-radius: 50px
+        } 
+    }
+}
