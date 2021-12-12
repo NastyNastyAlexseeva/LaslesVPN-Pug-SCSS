@@ -17,9 +17,9 @@
 
     &__logo  {
         img {
-        display: block;
-        max-width: 100%;
-        margin: 0;
+            display: block;
+            max-width: 100%;
+            margin: 0;
         }
     }
 
@@ -67,14 +67,14 @@
         width: 150px;
         text-decoration: none;
         color: $font-dark-color;
-        font-weight: $font-weight-500;
+        font-weight: 500;
         text-align: center;
         display: inline-block;
         vertical-align: middle;
     }
 
     &__button {
-        button-primary {    
+        &.button-primary {    
             text-decoration: none;
             color: $red-color;
             font-size: 16px;
