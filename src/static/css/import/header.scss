@@ -12,10 +12,8 @@
         display: flex;
         align-items: center;
         width: 149px;
-        height: 36.23px;
-    }
+        height: 36px;
 
-    &__logo  {
         img {
             display: block;
             max-width: 100%;
@@ -24,12 +22,12 @@
     }
 
     &__menu {
-    margin-top: -6px;
+        margin-top: -6px;
     }
 
     &__menu--body {
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
 
     &__menu--list {
@@ -39,7 +37,7 @@
     &__menu--list { 
         li {
             display: inline-block;
-            font-size: $font-size-16;
+            font-size: $font-size;
             margin: 0 10px;
         }
     }
@@ -55,13 +53,12 @@
 
     &__menu--link {
         color: $text-color;
-        font-size: $font-size-16;
+        font-size: $font-size;
     }
 
     &__buttons {
         display: flex;
     }
-
 
     &__button {
         width: 150px;
