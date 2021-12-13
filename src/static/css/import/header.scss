@@ -1,5 +1,7 @@
 html {
   font-size: 10px;
+  width: 144rem;
+  margin: auto;
 }
 body {
   font-size: 16px;
@@ -10,15 +12,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 144rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin: 6rem 15rem 0;
 }
 
-.a {
+.logo {
   width: 15rem;
   height: 3.5rem;
+  margin-top: auto;
 }
 .nav {
   display: flex;
@@ -35,6 +37,22 @@ body {
   text-decoration: none;
   font-weight: 400;
   color: #4f5665;
+}
+
+.nav-link:visited {
+  color: blue;
+}
+
+.nav-link:hover {
+  text-decoration: underline red 0.5rem;
+}
+
+.nav-link:active {
+  color: #24e955;
+}
+
+.nav-link:disabled {
+  color: grey;
 }
 
 .control {
