@@ -1,0 +1,16 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 144rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 6rem 15rem 0;
+}
