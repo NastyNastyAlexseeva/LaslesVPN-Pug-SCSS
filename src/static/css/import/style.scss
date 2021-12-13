@@ -3,6 +3,7 @@ html {
 }
 body {
   font-size: 16px;
+  font-family: Rubik, sans-serif;
 }
 
 .header {
@@ -13,4 +14,56 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin: 6rem 15rem 0;
+}
+
+.a {
+  width: 15rem;
+  height: 3.5rem;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  margin: 0 4rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #4f5665;
+}
+
+.control {
+  display: flex;
+}
+
+.control-item:first-child {
+  margin-right: 3rem;
+}
+.control-btn {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.control-btn_signin {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0b132a;
+  width: 15rem;
+  height: 4.5rem;
+}
+
+.control-btn_signup {
+  font-weight: 600;
+  font-size: 16px;
+  color: #f53855;
+  border: 1px solid #f53855;
+  width: 15rem;
+  height: 4.5rem;
+  box-sizing: border-box;
+  border-radius: 50px;
 }
