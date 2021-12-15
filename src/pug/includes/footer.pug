@@ -5,7 +5,7 @@ include mixins.pug
         .footer__left 
             .footer__logo
                 img( src="./img/svg/Vector.svg" alt="logo").footer__logo.logo
-                span.footer__title LaslesVPN
+                span.footer__name LaslesVPN
             span.footer__text LaslesVPN is a private virtual network that has unique features and has high security.
             .footer__social
                 a(href="https://www.facebook.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
@@ -28,7 +28,7 @@ include mixins.pug
                 {href: '#', text: 'Countries'},
                 {href: '#', text: 'Blog'}
                 ] )
-            .footer_column
+            .footer__column
                 .footer__title
                     span Engage
                 +footer__list( [ 
@@ -39,7 +39,7 @@ include mixins.pug
                 {href: '#', text: 'Privacy Policy'},
                 {href: '#', text: 'Terms of Service'}
                 ] )
-            .footer_column
+            .footer__column
                 .footer__title
                     span Earn Money
                 +footer__list( [ 
