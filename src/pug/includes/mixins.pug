@@ -1,4 +1,4 @@
-mixin list ( header__list )
+mixin header__list ( header__list )
     ul.header__list
         each header__link in header__list 
             li.header__link
@@ -12,4 +12,10 @@ mixin statistic(svg, num, name)
             img( src="img/svg/" + svgName + ".svg" alt="" + svgName)
         span.statistics__num #{num}
         span.statistics__name #{name}
+
+mixin footer__list(footer__list)
+    ul.footer__list
+        each footer__link in footer__list 
+            li.footer__link
+                a(href=footer__link.href)=footer__link.text
 
