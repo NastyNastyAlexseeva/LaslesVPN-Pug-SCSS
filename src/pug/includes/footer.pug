@@ -1,47 +1,51 @@
+include mixins.pug
+
 .footer
     .footer__container 
-        .footer__left
-            a(href="").footer__logo.log
-            span  LaslesVPN is a private virtual network that has unique features and has high security.
-            .footer__social.social
-                a(href="https://www.facebook.com"  target="_blank" rel="noopener noreferrer" ).footer__link-social
-                    <img src="" alt="facebook">
-                a(href="https://www.twitter.com"  target="_blank" rel="noopener noreferrer" ).footer__link-social
-                    <img src="" alt="twitter">
-                a(href="https://www.instagram.com"  target="_blank" rel="noopener noreferrer" ).footer__link-social
-                    <img src="" alt="instagram">
+        .footer__left 
+            .footer__logo
+                img( src="./img/svg/Vector.svg" alt="logo").footer__logo.logo
+                span.footer__title LaslesVPN
+            span.footer__text LaslesVPN is a private virtual network that has unique features and has high security.
+            .footer__social
+                a(href="https://www.facebook.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/facebook.svg" alt="facebook")
+                a(href="https://www.twitter.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/twitter.svg" alt="facebook")
+                a(href="https://www.instagram.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/instagram.svg" alt="facebook")
             .footer__copyrights
                 span ©2020LaslesVPN
-            .footer_right
-                .footer_column
-                    .footer__title
-                        span Product
-                    +footer__list( [
-                    {href: '#', text: 'Download'},
-                    {href: '#', text: 'Pricing'},
-                    {href: '#', text: 'Locations'},
-                    {href: '#', text: 'Server'},
-                    {href: '#', text: 'Countries'},
-                    {href: '#', text: 'Blog'}
-                    ] )
-                .footer_column
-                    .footer__title
-                        span Engage
-                    +footer__list( [ 
-                    {href: '#', text: 'LaslesVPN ?'},
-                    {href: '#', text: 'FAQ'},
-                    {href: '#', text: 'Tutorials'},
-                    {href: '#', text: 'About Us'},
-                    {href: '#', text: 'Privacy Policy'},
-                    {href: '#', text: 'Terms of Service'}
-                    ] )
-                .footer_column
-                    .footer__title
-                        span Earn Money
-                    +footer__list( [ 
-                    {href: '#', text: 'Affiliate'},
-                    {href: '#', text: 'Become Partner'}
-                    ] )
+        .footer__right
+            .footer__column
+                .footer__title
+                    span Product
+                +footer__list( [
+                {href: '#', text: 'Download'},
+                {href: '#', text: 'Pricing'},
+                {href: '#', text: 'Locations'},
+                {href: '#', text: 'Server'},
+                {href: '#', text: 'Countries'},
+                {href: '#', text: 'Blog'}
+                ] )
+            .footer_column
+                .footer__title
+                    span Engage
+                +footer__list( [ 
+                {href: '#', text: 'LaslesVPN ?'},
+                {href: '#', text: 'FAQ'},
+                {href: '#', text: 'Tutorials'},
+                {href: '#', text: 'About Us'},
+                {href: '#', text: 'Privacy Policy'},
+                {href: '#', text: 'Terms of Service'}
+                ] )
+            .footer_column
+                .footer__title
+                    span Earn Money
+                +footer__list( [ 
+                {href: '#', text: 'Affiliate'},
+                {href: '#', text: 'Become Partner'}
+                ] )
 
 
 
