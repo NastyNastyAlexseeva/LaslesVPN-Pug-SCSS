@@ -8,6 +8,16 @@
     margin: 0 auto;
     overflow: hidden;
     
+    @include desktop {
+        padding: 30px 150px;
+    }
+
+    @include tablet {
+        align-items: flex-start;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
     &__logo {
         display: flex;
         align-items: center;
