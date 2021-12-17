@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  width: 144rem;
+  max-width: 1440px;
   margin: auto;
 }
 body {
@@ -20,8 +20,8 @@ body {
 .logo {
   width: 15rem;
   height: 3.5rem;
-  margin-top: auto;
 }
+
 .nav {
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 }
 
 .nav-item {
-  margin: 0 4rem;
+  margin: 0 2rem;
 }
 
 .nav-link {
@@ -59,9 +59,6 @@ body {
   display: flex;
 }
 
-.control-item:first-child {
-  margin-right: 3rem;
-}
 .control-btn {
   font-size: 16px;
   font-weight: 500;

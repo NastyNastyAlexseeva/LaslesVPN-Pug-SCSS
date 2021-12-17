@@ -1,7 +1,7 @@
 .section-two {
   display: flex;
   justify-content: space-between;
-  margin: 13rem 0 0;
+  margin: 13rem 0;
 }
 
 .main-text {
@@ -10,7 +10,7 @@
   color: #0b132a;
 }
 
-span.mark {
+.mark {
   font-weight: 700;
 }
 
@@ -23,3 +23,25 @@ span.mark {
   max-width: 55rem;
   width: 55rem;
 }
+
+.second-text {
+  width: 55.5rem;
+  height: 6rem;
+  margin-top: 2rem;
+  line-height: 3rem;
+  color: #4f5665;
+}
+
+.red-btn {
+  color: #ffffff;
+  background-color: #f53838;
+  position: absolute;
+  width: 25rem;
+  height: 6rem;
+  border-radius: 1rem;
+  margin-top: 5rem;
+}
+
+.red-btn:hover {
+  box-shadow: 0 2.5rem 3rem -0.5rem rgba(245, 56, 56, 0.35);
+} // не придумал, как при наведении уменьшать тень. Она уменьшается только вместе с самим блоком //
