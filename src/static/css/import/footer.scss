@@ -4,9 +4,12 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    background-color: #F8F8F8;
+    height: 563px;
 
     &__container {
-        background-color: $background-primary;
+        background-color: #F8F8F8;
         display: flex;
         flex-wrap: nowrap; 
         justify-content: space-between;

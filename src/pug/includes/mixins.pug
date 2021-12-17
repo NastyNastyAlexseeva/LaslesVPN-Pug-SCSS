@@ -19,3 +19,19 @@ mixin footer__list(footer__list)
             li.footer__link
                 a(href=footer__link.href)=footer__link.text
 
+
+mixin column(svg, title, ...items)
+    - var svgName = svg;
+    .column
+        .column__image 
+            img(src="img/svg/" + svgName + ".svg" alt="" + svgName)
+        .column__title 
+                span #{title}
+        ul.column__list
+            each column__item in items
+                li.column__item= column__item
+
+
+
+
+

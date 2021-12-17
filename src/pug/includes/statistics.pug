@@ -16,3 +16,37 @@ include mixins.pug
             li.info__item Internet without borders.
             li.info__item Supercharged VPN.
             li.info__item No specific time limits.
+
+.columns
+    .columns__title
+        span Choose Your Plan
+    .columns__subtitle
+        span Let's choose the package that is best for you and explore it happily and cheerfully.
+    .columns__container
+        +column(
+            "Free", 
+            "Free Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "No Traffic Logs",
+            "Works on All Devices"
+        )
+        +column(
+            "Standard", 
+            "Standard Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "Yes Traffic Logs",
+            "Works on All Devices",
+            "Connect Anyware"
+        )
+        +column(
+            "Premium", 
+            "Premium Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "Yes Traffic Logs",
+            "Works on All Devices",
+            "Connect Anyware",
+            "Get New Features"
+        )
