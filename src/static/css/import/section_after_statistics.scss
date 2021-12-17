@@ -1,0 +1,40 @@
+.section_after_statistics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-content {
+  width: 40rem;
+  height: 10rem;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  color: #0b132a;
+  margin-bottom: 2rem;
+}
+
+.second-content {
+  width: 43rem;
+  height: 6rem;
+  color: #4f5665;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #4f5665;
+}
+
+img.check {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.2rem;
+}
+.li-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
