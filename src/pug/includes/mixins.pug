@@ -30,6 +30,15 @@ mixin column(svg, title, ...items)
         ul.column__list
             each column__item in items
                 li.column__item= column__item
+                .column__foter
+        block
+
+mixin column__footer (price, btn)  
+    .column__footer__price #{price}
+    a(href="#") 
+        span.column__footer-btn #{btn}
+        
+
 
 
 
