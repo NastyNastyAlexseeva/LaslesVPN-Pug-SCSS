@@ -24,13 +24,6 @@ module.exports = function() {
             stream: true
         }));
     });
-    //slider slick
-    $.gulp.task('scripts', function() {
-        return $.gulp.src('src/static/js/slick.min.js')
-        .pipe($.gulp.dest('build/js/'))
-        .pipe($.bs.reload({
-            stream: true
-        }));
-    });
-
+    
+    
 };

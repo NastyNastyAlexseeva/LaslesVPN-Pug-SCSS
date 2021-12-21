@@ -1,34 +1,85 @@
-.slick-slider {
-    min-width: 0;
-    display: inline-flex;
-    justify-content: space-around;
+.swiper {
+	width: auto;
+	height: 300px;
 
-
-	.slider__card {
-        width: 430px;
+	.swiper-slide {
+		
+        width: 400px;
         height: 230px;
         border: 2px solid red;
-        border-radius: 5px;
-		.name { 
+        border-radius: 10px;
+		box-sizing: border-box;
+
+		.review{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+
+		
+		&__name {
+			text-align: left;
 
 		}
 
-		.subname { 
+		&__subname {
+			text-align: left;
+
 
 		}
 
-		.photo {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+		&__image {
+			object-fit: cover; 
+			width: 50px;
+			height: 50px;
+			margin-top: 30px;
+			margin-left: 30px;
+			
 
-			img { 
+			img {
+				
 
 			}
 		}
-
-		.text { 
+		&__rating{
 
 		}
 	}
+
+		.text {
+			margin-left: 30px;
+			margin-bottom: 30px;
+			width: 340px;
+			height: 100px;
+			line-height: 30px;
+			font-size: 16px;
+			word-wrap: break-word;
+			overflow: hidden;
+			color: #0B132A;
+		}
+	}
+	.swiper-button-prev{
+
+	}
+
+    .swiper-pagination{
+
+	}
+
+    .swiper-button-prev{
+		
+		background-color: red;
+
+	}
+
+    .swiper-button-next{
+		background-color: red;
+
+
+	}
+
+    .swiper-scrollbar{
+
+	}
+
 }
+

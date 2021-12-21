@@ -1,20 +1,48 @@
-include mixins 
 
-.slick-slider 
-    .slider__card 
-        .name Viezh Robert
-        .subname Warsaw, Poland
-        .photo
-            img(src="./img/robert.png", alt="")
-        .text “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
-    .slider__card 
-        .name Yessica Christy
-        .subname Shanxi, China
-        .photo
-            img(src="./img/christy.png", alt="")
-        .text “I like it because I like to travel far and still can connect with high speed.”. 
-    .slider__card 
-        .name Kim Young Jou
-        .subname Seoul, South Korea
-            img(src="./img/jou.png", alt="")
-        .text “This is very unusual for my business that currently requires a virtual private network that has high security.”.
+
+.swiper
+    .swiper-wrapper 
+        .swiper-slide
+            .review
+                .review__image
+                    img(src="./img/robert.png", alt="")
+                .review__name Viezh Robert
+                    .review__subname Warsaw, Poland
+                .review__rating
+                    span 4.5
+                    img(src="./img/svg/rating.svg", alt="")
+            .text 
+                span “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
+        .swiper-slide
+            .review   
+                .review__image
+                    img(src="./img/christy.png", alt="")
+                .review__name Yessica Christy
+                    .review__subname Shanxi, China
+                .review__rating
+                    span 4.5
+                    img(src="./img/svg/rating.svg", alt="")
+            .text 
+                span “I like it because I like to travel far and still can connect with high speed.”. 
+        .swiper-slide
+            .review
+                .review__image
+                    img(src="./img/jou.png", alt="")
+                .review__name Kim Young Jou
+                    .review__subname Seoul, South Korea
+                .review__rating
+                    span 4.5
+                    img(src="./img/svg/rating.svg", alt="")
+            .text 
+                span “This is very unusual for my business that currently requires a virtual private network that has high security.”
+
+    .swiper-button-prev
+
+    .swiper-pagination
+
+    .swiper-button-prev
+
+    .swiper-button-next
+
+    .swiper-scrollbar
+
