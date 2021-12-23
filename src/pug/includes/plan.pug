@@ -2,30 +2,41 @@ section.plan
     .first-text-plan Choose Your Plan<!-- сделать миксин из стилей текста для переиспользования> <!-->
     .second-text-plan Let's choose the package that is best for you and explore it happily and <br>cheerfully.<!-- сделать миксин из стилей текста для переиспользования> <!-->
     .column
-        .column-one 
-            img.column-img(src="img/free.png")
-            .plan-text Free Plan
-            ul.list-plan
-                li.column-item Unlimited Bandwitch
-                li Encrypted Connection
-                li No Traffic Logs
-                li Works on All Devices
-        .column-two 
-            img.column-img(src="img/standard.png")
-            .plan-text Standard Plan
-            ul.list-plan
-                li Unlimited Bandwitch
-                li Encrypted Connection
-                li Yes Traffic Logs
-                li Works on All Devices
-                li Connect Anyware
-        .column-three
-            img.column-img(src="img/premium.png")
-            .plan-text Premium Plan
-            ul.list-plan
-                li Unlimited Bandwitch
-                li Encrypted Connection
-                li Yes Traffic Logs
-                li Works on All Devices
-                li Connect Anyware
-                li Get New Features
+        +card(
+            "img/free.png",
+            "Free Plan",
+            ["Unlimited Bandwitch", "Encrypted Connection", "No Traffic Logs", "Works on All Devices"],
+            "#")
+
+        +card(
+            "img/standard.png",
+            "Standard Plan",
+            ["Unlimited Bandwitch", "No Traffic Logs", "Works on All Devices"],
+            "#")
+        //- .column-one 
+        //-     img.column-img(src="img/free.png")
+        //-     .plan-text Free Plan
+        //-     ul.list-plan
+        //-         li.column-item Unlimited Bandwitch
+        //-         li Encrypted Connection
+        //-         li No Traffic Logs
+        //-         li Works on All Devices
+        //- .column-two 
+        //-     img.column-img(src="img/standard.png")
+        //-     .plan-text Standard Plan
+        //-     ul.list-plan
+        //-         li Unlimited Bandwitch
+        //-         li Encrypted Connection
+        //-         li Yes Traffic Logs
+        //-         li Works on All Devices
+        //-         li Connect Anyware
+        //- .column-three
+        //-     img.column-img(src="img/premium.png")
+        //-     .plan-text Premium Plan
+        //-     ul.list-plan
+        //-         li Unlimited Bandwitch
+        //-         li Encrypted Connection
+        //-         li Yes Traffic Logs
+        //-         li Works on All Devices
+        //-         li Connect Anyware
+        //-         li Get New Features

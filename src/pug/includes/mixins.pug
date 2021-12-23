@@ -6,3 +6,13 @@ mixin statistic(svg, num, name)
         span.statistics__num #{num}
         span.statistics__name #{name}
 
+mixin card(imgHref, title, list, link)
+    .column-one 
+        .column-img
+            img(src=imgHref)
+        span.plan-text #{title}
+        ul.list-plan
+            each item in list
+                li.column-item #{item}
+        a(href=link) link!
+
