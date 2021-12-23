@@ -1,4 +1,5 @@
 .swiper__container{
+	margin-top: 124px;
 	width: 100%;
 	height: 590px;
 	position: relative;
@@ -17,10 +18,10 @@
 		
 
 		.swiper-slide {
-			
+			padding: 30px;
+
 			&-active{
-				border: 2px solid $red-color;			
-			}
+				border: 2px solid $red-color;			}
 			width: 400px;
 			height: 230px;
 			border: 2px solid #DDDDDD;
@@ -30,16 +31,18 @@
 			.review{
 				display: flex;
 				justify-content: space-between;
-				flex-wrap: nowrap;
+				flex-wrap: wrap;
 
 			
 			&__name {
 				text-align: left;
+				font-size: 18px;
 
 			}
 
 			&__subname {
 				text-align: left;
+				font-size: 14px;
 
 
 			}
@@ -48,9 +51,8 @@
 				object-fit: cover; 
 				width: 50px;
 				height: 50px;
-				margin-top: 30px;
-				margin-left: 30px;
-				
+				float: left;
+				margin-right: 20px;
 
 				img {
 					
@@ -65,13 +67,8 @@
 	}
 
 			.text {
-				margin-left: 30px;
-				margin-bottom: 30px;
-				width: 340px;
-				height: 100px;
 				line-height: 30px;
 				font-size: 16px;
-				word-wrap: break-word;
 				overflow: hidden;
 				color: #0B132A;
 			}
