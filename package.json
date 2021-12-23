@@ -40,8 +40,5 @@
   "bugs": {
     "url": "https://github.com/NastyNastyAlexseeva/LaslesVPN-Pug-SCSS/issues"
   },
-  "homepage": "https://github.com/NastyNastyAlexseeva/LaslesVPN-Pug-SCSS#readme",
-  "dependencies": {
-    "swiper": "^7.3.3"
-  }
+  "homepage": "https://github.com/NastyNastyAlexseeva/LaslesVPN-Pug-SCSS#readme"
 }
