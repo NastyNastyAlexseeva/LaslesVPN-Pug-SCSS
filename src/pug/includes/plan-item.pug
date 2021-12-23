@@ -1,0 +1,11 @@
+mixin card(imgHref, title, list, link)
+    - var imgName = imgHref;
+.column-one 
+    .column-img
+        img(src=imgName)
+    span.plan-text #{title}
+        ul.list-plan
+            li.column-item Unlimited Bandwitch
+                li Encrypted Connection
+                li No Traffic Logs
+                li Works on All Devices
