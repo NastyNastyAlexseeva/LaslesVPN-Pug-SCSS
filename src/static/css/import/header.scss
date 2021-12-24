@@ -18,6 +18,10 @@
         box-shadow: none;
     }
 
+    @include mobile {
+        
+    }
+
     &__logo {
         display: flex;
         align-items: center;
