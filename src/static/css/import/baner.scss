@@ -1,0 +1,56 @@
+.baner__container {
+    position: relative;
+    width: 1140px;
+    height: 233px;
+    border-radius: 10px;
+    border: 2px solid $grey-200-color;
+    background-color: #FFF;
+    margin: 150px 0px -210px 150px;
+    z-index: 2;
+
+
+
+    .baner {
+        height: 233px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px 0px 50px;
+        
+
+        &__title {
+            font-size: 35px;
+            line-height: 45px;
+            width: 370px;
+
+
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 30px;
+            color: #4F5665;
+
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $red-color;
+            border-radius: 10px;
+            width: 250px;
+            height: 60px;
+            
+            &__:hover {
+                box-shadow: 0px 15px 20px rgba(245, 56, 56, 0.35);
+                transition-delay: 0.25s;
+                border-radius: 10px;
+            }
+        }
+        &__btn {
+            color: #ffff
+        }
+    }
+}
+
+
