@@ -4,34 +4,86 @@
     background-color: $background-primary;
     align-items: center;
     padding: 37px 150px;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     
     @include desktop {
-        padding: 30px 150px;
+        padding: 30px ;
+    }
+
+    &__tablet {
+        display: none;
+        width: 0;
+        height: 0;
+
     }
 
     @include tablet {
-        align-items: flex-start;
-        flex-direction: column;
-        box-shadow: none;
-    }
+        width: 100%;
 
-    @include mobile {
+    &__tablet {
+        display: none;
+
+
+        @include tablet {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+
+            span,
+            &::before,
+            &::after{
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                background-color: #F53838;
+            }
+            &::before,
+            &::after{
+                content: "";
+            }
+            &::before{
+                top: 0;
+            }
+            &::after{
+                bottom: 0;
+            }
+            span{
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+                
+            }
+        }
         
-    }
 
+    }
     &__logo {
         display: flex;
         align-items: center;
         width: 149px;
         height: 36px;
+        
 
         img {
             display: block;
             max-width: 100%;
             margin: 0;
+        }
+        @include tablet {
+            z-index: 5;
+            left: 0;
+            top: 0;
+
+            img {
+            
+            }
+            
         }
     }
 
@@ -39,25 +91,77 @@
         margin-top: -6px;
         display: flex;
         align-items: center;
+
+        @include tablet {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(-100%, 0px);
+            background-color: #fff;
+            padding: 100px 30px 30px 30px;
+            transition: left 0.3s ease 0s;
+            margin-top: 0;
+            display: block;
+
+            &._active{
+                transform: translate(0px, 0px)
+            }
+            
+
+            &::before {
+                content: "";
+                position: fixed;
+                width: 100%;
+                height: 70px;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+                z-index: 2;
+            }
+        }
+        }
     }
 
-    &__list { 
-        li {
-            display: inline-block;
-            font-size: $font-size;
-            margin: 0 10px;
-            color: $text-color;
-            list-style-type: none;
+    &__list {
+        display: inline-block;
+        font-size: $font-size;
+        margin: 0 10px;
+        color: $text-color;
+        list-style-type: none;
 
+        li {
             a {
                 display: block;
                 text-decoration: none;
             }
         }
+        @include tablet {
+            
+            li {
+                display: flex;
+                align-items: center;
+                margin: 0px 0px 30px 0px;
+
+                &:last-child {
+                margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    &__link {
+        @include tablet {
+            font-size: 24px;
+        }
     }
 
     &__buttons {
         display: flex;
+
+        @include tablet {
+            margin-top: auto;
+        }
     }
 
     &__button {
@@ -69,6 +173,7 @@
         text-align: center;
         display: inline-block;
         vertical-align: middle;
+        cursor: pointer;
         &:hover{
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 transition: 500ms ease;
@@ -84,6 +189,7 @@
             line-height: 19px;
             border: 1px solid $red-color;
             border-radius: 50px;
+            cursor: pointer;
             
             &:hover{
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
