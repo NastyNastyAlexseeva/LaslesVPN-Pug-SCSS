@@ -13,6 +13,7 @@ mixin card(imgHref, title, list, price, link)
         ul.list-plan
             each item in list
                 li.column-item #{item}
-        .plan-price #{price}
+        .plan-price
+            .plan-price-text #{price}
         a.select(href=link) Select
 
