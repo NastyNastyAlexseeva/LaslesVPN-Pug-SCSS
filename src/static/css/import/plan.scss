@@ -1,3 +1,5 @@
+// придумать, как центрировать ценники
+
 .plan {
   margin-top: 19rem;
 }
@@ -13,7 +15,6 @@
 
 .second-text-plan {
   margin: 2rem 0 0;
-
   line-height: 3rem;
   text-align: center;
   color: #4f5665;
@@ -60,6 +61,7 @@
 }
 
 .plan-price {
+  position: absolute;
   top: 61.5rem;
   display: flex;
   align-items: center;

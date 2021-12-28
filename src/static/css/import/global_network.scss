@@ -1,0 +1,54 @@
+.global-network {
+  margin-top: 15rem;
+}
+
+.first-text-global {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  color: #0b132a;
+  margin-bottom: 2rem;
+}
+
+.second-text-global {
+  margin: 2rem 0 15rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #4f5665;
+}
+
+.img-global {
+  max-width: 106rem;
+  max-height: 54rem;
+  margin-bottom: 0.65rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsored {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sponsored-netflix {
+  max-width: 20rem;
+  max-height: 11rem;
+}
+.sponsored-reddit {
+  max-width: 15.6rem;
+  max-height: 5.1rem;
+}
+.sponsored-amazon {
+  max-width: 27.8rem;
+  max-height: 20.8rem;
+}
+.sponsored-discord {
+  max-width: 18.7rem;
+  max-height: 6.3rem;
+}
+.sponsored-spotify {
+  max-width: 17.1rem;
+  max-height: 5.1rem;
+}
