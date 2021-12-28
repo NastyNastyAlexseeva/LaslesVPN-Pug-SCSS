@@ -17,4 +17,16 @@ mixin card(imgHref, title, list, price, link)
             .plan-price-text #{price}
         a.select(href=link) Select
 
-mixin slider-card(img, title, subtitle, grade, svg, review)
+mixin slider-card(imgPhoto, title, subtitle, grade, imgStar, review)
+    .about 
+        .header-card
+            .personal
+                img.photo(src="img/" + imgPhoto + ".png" alt="" + imgPhoto)
+                .about-card
+                    .card-title #{title}
+                    .card-subtitle #{subtitle}
+            .grade-card
+                .grade #{grade}
+                img.img-star(src="img/star.png")
+        .slider-review #{review}
+        

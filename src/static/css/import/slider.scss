@@ -17,3 +17,79 @@
   text-align: center;
   color: #4f5665;
 }
+
+.slider-card {
+  display: flex;
+}
+
+.about {
+  background: #ffffff;
+  border: 2px solid #f53838;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 40rem;
+  height: 23rem;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  height: 9rem;
+}
+
+.personal {
+  display: flex;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  margin: 3rem 2rem 2rem 3rem;
+}
+
+.about-card {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  height: 8rem;
+}
+
+.card-title {
+  width: 15rem;
+  height: 1.8rem;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0b132a;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  width: 13rem;
+  height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #4f5665;
+}
+
+.grade-card {
+  display: flex;
+  margin: 4.8rem 3.2rem;
+}
+
+.grade {
+  margin-right: 0.5rem;
+  width: 2.4rem;
+  height: 1.6rem;
+}
+.img-star {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.2rem;
+}
+
+.slider-review {
+  margin: 0 3rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #0b132a;
+}
