@@ -3,39 +3,47 @@
     justify-content: space-between;
     background-color: $background-primary;
     align-items: center;
-    padding: 37px 150px;
-    width: 100%;
+    padding-left:  150px;
+    padding-right:  150px;
+    padding-top: 30px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        
+    }
     
-    
-    
-    &__tablet{
+    &__tablet {
         position: absolute;
+        padding: 0;
         left: 0;
         top: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        display: none;
         
     }
     
     @include desktop {
-        padding: 30px ;
+        padding: 0 150px;
+        padding-top: 30px;
     }
 
-    &__tablet {
-        display: none;
-    }
 
     @include tablet {
         width: 100%;
         position: fixed;
         top: 0;
 	    left: 0;
-	    width: 100%;
 	    z-index: 10;
         padding: 24px;
 
-    &__tablet {
-        display: none;
+        &__tablet {
+            display: none;
 
 
         @include tablet {
@@ -86,20 +94,16 @@
             }
         }
         
-        
-
     }
     &__logo {
         display: flex;
+        flex-shrink: 0;
         align-items: center;
         width: 149px;
         height: 36px;
         
-
         img {
-            display: block;
-            max-width: 100%;
-            margin: 0;
+            
         }
         @include tablet {
             z-index: 5;
@@ -114,11 +118,15 @@
     }
 
     &__body {
-        margin-top: -6px;
+        margin-top: 0px;
         display: flex;
-        align-items: center;
-
+        justify-content: space-between;
+        
+        
         @include tablet {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -128,10 +136,6 @@
             background-color: #fff;
             padding: 100px 30px 30px 30px;
             transition: left 0.3s ease 0s;
-            display: flex;
-            flex-direction: column;
-            margin-top: 0;
-
             &._active{
                 transform: translate(0px, 0px);
             }
@@ -147,20 +151,34 @@
                 background-color: #fff;
                 z-index: 2;
             }
-        }
+            }
         }
     }
 
     &__list {
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         font-size: $font-size;
-        margin: 0 10px;
+        margin-right: 40px;
         color: $text-color;
         list-style-type: none;
-        
+        padding-top: 20px;
+        flex-direction: row;
         
         @include tablet {
             left: 0;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                align-items: center;
+                
+
+                &:last-child {
+                margin-bottom: 0px;
+                
+                }
+            }
             
         }
 
@@ -170,39 +188,43 @@
                 text-decoration: none;
             }
         }
-        @include tablet {
-            
-            li {
-                display: flex;
-                align-items: center;
-                margin: 0px 0px 30px 0px;
-
-                &:last-child {
-                margin-bottom: 0px;
-                }
-            }
-        }
     }
     &__link {
+        display: inline-block;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0px;
+            }
+        @include desktop{
+            display: flex;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0px;
+                }
+        }
         @include tablet {
-            font-size: 24px;
+            display: inline-block;
+            font-size: 34px;
+            line-height: 2.5;
         }
     }
 
     &__buttons {
-        
-
+        padding-top: 6px;
+        display: inline-block;
         @include tablet {
             margin-top: auto;
             font-size: 20px;
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
+            font-weight: 500;
         }
     }
 
     &__button {
         width: 150px;
+        padding-top: 0px;
         padding: 15px;
         text-decoration: none;
         color: $font-dark-color;
@@ -231,6 +253,9 @@
             &:hover{
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 transition: 500ms ease;
+            }
+            @include tablet{
+                font-weight: 500;
             }
         } 
     }

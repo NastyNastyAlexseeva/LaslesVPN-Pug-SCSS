@@ -2,9 +2,7 @@ include mixins.pug
 
 header.header
     a(href="#").header__logo
-        img( src="./img/Logo.png" alt="logo").header__logo
-    .header__tablet 
-        span
+        img( src="./img/Logo.svg" alt="logo").header__logo
     nav.header__body
         +header__list( [ 
         {href: '#', text: 'About'},
@@ -19,3 +17,5 @@ header.header
                 span Sign Ip
             a.header__button.button-primary(href='#')
                 span Sign Up
+    .header__tablet 
+        span

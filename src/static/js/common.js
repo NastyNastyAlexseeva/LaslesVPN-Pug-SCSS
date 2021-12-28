@@ -39,9 +39,20 @@ const swiper = new Swiper('.swiper', {
 const headerTablet = document.querySelector('.header__tablet');
 const headerBody = document.querySelector('.header__body');
 if (headerTablet) {
-	headerTablet.addEventListener("click", function (e) {
+	headerTablet.addEventListener("click", function () {
 		document.body.classList.toggle('_lock');
 		headerTablet.classList.toggle('_active');
 		headerBody.classList.toggle('_active');
 	});
 }
+
+
+//dynamic ul-li
+
+const list = ["Powerfull online protection.", "Internet without borders.", "Supercharged VPN.", "No specific time limits."];
+    const listElements = document.getElementById('info__items');
+    listElements.innerHTML = `${list.map(element => `<li class="info__item">${element}</li>`).join('')}`;
+    
+    
+//footer accordion menu
+
