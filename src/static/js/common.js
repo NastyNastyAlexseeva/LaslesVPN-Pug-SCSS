@@ -59,16 +59,23 @@ const list = ["Powerfull online protection.", "Internet without borders.", "Supe
 
 const spollersArray = document.querySelectorAll("[data-spollers]");
     if (spollersArray.length > 0) {
+
+        //regular spollers
         const spollersRegular = Array.from(spollersArray).filter(function(item, index, self) {
             return !item.dataset.spollers.split(",")[0];
         });
+
+        //initialization of regular spollers
         if(spollersRegular.length > 0) {
             initSpollers(spollersRegular);
         }
+
+        //getting spollers with the mediaquaries
         const spollersMedia = Array.from(spollersArray).filter(function(item, index, self) {
             return item.dataset.spollers.split(",")[0];
         });
 
+        //initialization of spollers with mediaQuaries
         if(spollersMedia.length > 0) {
             const breakpointsArray = [];
             spollersMedia.forEach(item => {
@@ -81,14 +88,16 @@ const spollersArray = document.querySelectorAll("[data-spollers]");
                 breakpointsArray.push(breakpoint);
             });
             
+            //getting unique breakpoints
             let mediaQueries = breakpointsArray.map(function(item) {
-                return '(' + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+                return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
             });
             
             mediaQueries = mediaQueries.filter(function(item, index, self){
                 return self.indexOf(item) === index;
             });
 
+            //working with every breakpoint
             mediaQueries.forEach(breakpoint => {
                 const paramsArray = breakpoint.split(",");
                 const mediaBreakpoint = paramsArray[1];
@@ -96,7 +105,7 @@ const spollersArray = document.querySelectorAll("[data-spollers]");
                 const matchMedia = window.matchMedia(paramsArray[0]);
                 
                 const spollersArray = breakpointsArray.filter(function(item) {
-                    if (item.value === mediaBreakpoint && item.type ===mediaType){
+                    if (item.value === mediaBreakpoint && item.type === mediaType) {
                         return true;
                     }
                 });
@@ -114,23 +123,23 @@ const spollersArray = document.querySelectorAll("[data-spollers]");
             spollersArray.forEach(spollersBlock => {
                 spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
                 if (matchMedia.matches || !matchMedia) {
-                    spollersBlock.classList.add("_init");
+                    spollersBlock.classList.add('_init');
                     initSpollerBody(spollersBlock);
                     spollersBlock.addEventListener("click", setSpollerAction);
                 } else {
-                    spollersBlock.classList.remove ("_init");
+                    spollersBlock.classList.remove('_init');
                     initSpollerBody(spollersBlock, false);
-                    spollersBlock.removeEventListener ("click", setSpollerAction);
+                    spollersBlock.removeEventListener("click", setSpollerAction);
                 }
             });
         }
         function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-            const spollerTitles = spollersBlock.querySelectorAll('[data-spoller');
+            const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
                 if (spollerTitles.length > 0) {
                     spollerTitles.forEach(spollerTitle => {
                         if (hideSpollerBody) {
                             spollerTitle.removeAttribute('tabindex');
-                            if (!spollerTitle.classList.contains('_active')){
+                            if (!spollerTitle.classList.contains('_active')) {
                                 spollerTitle.nextElementSibling.hidden = true;
                             }
                         } else {
@@ -144,33 +153,34 @@ const spollersArray = document.querySelectorAll("[data-spollers]");
                 const el = e.target;
                 if (el.hasAttribute ('data-spoller') || el.closest('[data-spoller]')) {
                     const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest ('[data-spoller]');
-                    const spollersBlock =spollerTitle.closest ('[data-spollers]');
+                    const spollersBlock = spollerTitle.closest('[data-spollers]');
                     const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
                     if (!spollersBlock.querySelectorAll('._slide').length) {
-                        hideSpollerBody(spollersBlock);
+                        if(oneSpoller && !spollerTitle.classList.contains('_active')) {
+                            hideSpollersBody(spollersBlock);
+                        }
+                        hideSpollersBody(spollersBlock);
                     }
                     spollerTitle.classList.toggle('_active');
                     _slideToggle(spollerTitle.nextElementSibling, 500);
                 }
                 e.preventDefault();
             }
-        }
-        function hideSpollerBody (spollerBlock) {
-            const spollerActiveTitle  = spollerBlock.querySelector('[data-spoller]._active');
+        }   
+        function hideSpollersBody(spollersBlock) {
+            const spollerActiveTitle  = spollersBlock.querySelector('[data-spoller]._active');
             if (spollerActiveTitle) {
                 spollerActiveTitle.classList.remove('_active');
                 _slideUp(spollerActiveTitle.nextElementSibling, 500);
             }
         }
-
-
+    
 /* SLIDE UP */
 let _slideUp = (target, duration = 500) => {
-    if(!target.classList.contains('_slide')){
+    if(!target.classList.contains('_slide')) {
         target.classList.add('_slide');
         target.style.transitionProperty = 'height, margin, padding';
         target.style.transitionDuration = duration + 'ms';
-        target.style.boxSizing = 'border-box';
         target.style.height = target.offsetHeight + 'px';
         target.offsetHeight;
         target.style.overflow = 'hidden';
@@ -189,12 +199,13 @@ let _slideUp = (target, duration = 500) => {
             target.style.removeProperty('overflow');
             target.style.removeProperty('transition-duration');
             target.style.removeProperty('transition-property');
+            target.classList.remove('_slide');
         }, duration);
     }
 }
 /* SLIDE DOWN */
 let _slideDown = (target, duration = 500) => {
-    if(!target.classList.contains('_slide')){
+    if(!target.classList.contains('_slide')) {
         target.classList.add('_slide');
     if (target.hidden) {
         target.hidden = false;
@@ -207,7 +218,6 @@ let _slideDown = (target, duration = 500) => {
         target.style.marginTop = 0;
         target.style.marginBottom = 0;
         target.offsetHeight;
-        target.style.boxSizing = 'border-box';
         target.style.transitionProperty = "height, margin, padding";
         target.style.transitionDuration = duration + 'ms';
         target.style.height = height + 'px';
@@ -216,16 +226,18 @@ let _slideDown = (target, duration = 500) => {
         target.style.removeProperty('margin-top');
         target.style.removeProperty('margin-bottom');
         window.setTimeout( () => {
+            target.hidden = true;
             target.style.removeProperty('height');
             target.style.removeProperty('overflow');
             target.style.removeProperty('transition-duration');
             target.style.removeProperty('transition-property');
+            target.classList.remove('_slide')
         }, duration);
     }
 }
 /* TOOGLE */
 let _slideToggle = (target, duration = 500) => {
-    if (target) {
+    if (target.hidden) {
         return _slideDown(target, duration);
     } else {
         return _slideUp(target, duration);
