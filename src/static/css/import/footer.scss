@@ -107,6 +107,7 @@
             flex-basis: 33.33%;
             box-sizing: border-box;
             margin-right: 126px;
+            position: relative;
             &:last-child{
                 margin-right: 0px;
             }
@@ -133,4 +134,29 @@
                 font-size: 18px;
                 margin-bottom: 30px;
             }
+        &__column._init {
+            cursor: pointer;
+        }
+        &__column._init {
+            padding: 10px 40px 10px 10px;
+        }
+
+        &__column._init .nav-spoller::before,
+        &__column._init .nav-spoller::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: $red-color;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            transition: transform 0.3s ease 0s;
+        }
+        &__column._init .nav-spoller::after{
+            transform: rotate(-90deg);
+        }
+        &__column._init .nav-spoller._active::after{
+            transform: rotate(0deg);
+        }
+        
 }

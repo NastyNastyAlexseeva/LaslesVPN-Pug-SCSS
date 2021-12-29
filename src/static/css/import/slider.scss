@@ -38,14 +38,11 @@
 			&__name {
 				text-align: left;
 				font-size: 18px;
-
 			}
 
 			&__subname {
 				text-align: left;
 				font-size: 14px;
-
-
 			}
 
 			&__image {
@@ -82,9 +79,7 @@
 	display: flex;
 	margin-top: -150px;
 
-
-
-
+	
 	.swiper-button-prev-custom{
 		border: 2px solid $red-color;
 		width: 60px;
@@ -102,7 +97,6 @@
 			background-color: $red-color;
 			
 		}
-
 	}
 
 	.swiper-button-next-custom {
@@ -112,7 +106,6 @@
 		border-radius: 50%;
 		color: $red-color;
 		cursor: pointer;
-		margin-right: 150px;
 		
 		&form:focus-within{
 			
@@ -123,7 +116,6 @@
 				background-color: $red-color;
 				
 			}
-			
 	}
 
 	.swiper-pagination-custom{
