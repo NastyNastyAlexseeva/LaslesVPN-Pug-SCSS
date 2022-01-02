@@ -12,7 +12,7 @@
 }
 
 .second-text-slider {
-  margin: 2rem 0 0;
+  margin: 2rem 0 6rem;
   line-height: 3rem;
   text-align: center;
   color: #4f5665;
@@ -25,13 +25,16 @@
 
 .about {
   background: #ffffff;
-  border: 2px solid #f53838;
+  border: 2px solid #dddd;
   box-sizing: border-box;
   border-radius: 10px;
   width: 40rem;
   height: 23rem;
 }
 
+.about:hover {
+  border-color: #f53838;
+}
 .header-card {
   display: flex;
   justify-content: space-between;
@@ -98,9 +101,15 @@
 /* Слайдер */
 .slick-slider {
 }
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
+
+/* ширина и высота слайдов*/
+.slick-initialized .slick-slide {
+  width: 40rem;
+  height: 23rem;
+  margin-right: 5rem;
+  padding: 0;
 }
+
 /* Слайдер с точками */
 .slick-slider.slick-dotted {
 }
@@ -115,38 +124,38 @@
 /* Слайд */
 .slick-slide {
 }
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
+
 /* Стрелка */
 .slick-arrow {
+  display: flex;
   position: absolute;
   top: 120%;
   font-size: 0;
-  height: 1.75rem;
-  width: 2rem;
+  width: 60px;
+  height: 60px;
   border: solid 2px #f53838;
   box-sizing: border-box;
-  margin-bottom: 100rem;
+  border-radius: 50%;
+  margin-right: 15rem;
 }
 /* Стрелка влево */
 .slick-arrow.slick-prev {
-  left: 85%;
-  background: url("../img/prev.png") 0 0 /100% no-repeat;
+  left: 83%;
+  background: url("../img/prev.png") 50% no-repeat;
 }
+.slick-arrow.slick-prev:hover {
+  background: url("../img/prevw.png") 50% no-repeat;
+  background-color: red;
+}
+
 /* Стрелка вправо */
 .slick-arrow.slick-next {
   left: 90%;
-  background: url("../img/next.png") 0 0 /100% no-repeat;
+  background: url("../img/next.png") 50% no-repeat;
+}
+.slick-arrow.slick-next:hover {
+  background: url("../img/nextw.png") 50% no-repeat;
+  background-color: red;
 }
 /* Стрелка не активная */
 .slick-arrow.slick-disabled {
@@ -156,13 +165,13 @@
   display: flex;
   align-items: center;
   justify-content: start;
+  position: absolute;
+  bottom: -8.1rem;
 }
 .slick-dots li {
-  list-style: none;
+  margin: 0 1.5rem 0 0;
 }
-/* Активная точка */
-.slick-dots li.slick-active {
-}
+
 /* Элемент точки */
 .slick-dots li button {
   font-size: 0;
@@ -170,4 +179,11 @@
   height: 1.5rem;
   background: #dde0e4;
   border-radius: 50%;
+}
+
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: #f53838;
+  width: 45px;
+  border-radius: 20px;
 }
