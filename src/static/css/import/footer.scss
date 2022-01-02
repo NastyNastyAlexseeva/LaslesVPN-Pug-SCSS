@@ -10,6 +10,10 @@
     max-width: 100%;
     background-color: #F8F8F8;
     height: 563px;
+    @include tablet {
+    padding: 20px;
+    padding-top: 40px;
+    }
 
     &__container {
         background-color: #F8F8F8;
@@ -17,6 +21,10 @@
         flex-wrap: nowrap; 
         justify-content: space-between;
         width: 100%;
+        @include tablet {
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
         }
         &__left {
@@ -54,6 +62,9 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 30px;
+                @include tablet{
+                    margin-bottom: 0px;
+                }
                 }
             
             &__social {
@@ -97,6 +108,11 @@
             flex-shrink: 0;
             flex-basis: 50%;
             justify-content: flex-end;
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
         }
 
         &__column {
@@ -108,6 +124,10 @@
             box-sizing: border-box;
             margin-right: 126px;
             position: relative;
+
+            @include tablet {
+                margin-right: 0px;
+            }
             &:last-child{
                 margin-right: 0px;
             }
@@ -121,7 +141,6 @@
                 margin-bottom: 0px;
                 }
             }
-
             // &:not(:last-child) {
             //     padding-right: 30px;
             //     }
@@ -134,29 +153,34 @@
                 font-size: 18px;
                 margin-bottom: 30px;
             }
-        &__column._init {
-            cursor: pointer;
-        }
-        &__column._init {
-            padding: 10px 40px 10px 10px;
-        }
+            @include tablet {
 
-        &__column._init .nav-spoller::before,
-        &__column._init .nav-spoller::after {
-            content: '';
-            width: 20px;
-            height: 1px;
-            background-color: $red-color;
-            position: absolute;
-            right: 10px;
-            top: 20px;
-            transition: transform 0.3s ease 0s;
-        }
-        &__column._init .nav-spoller::after{
-            transform: rotate(-90deg);
-        }
-        &__column._init .nav-spoller._active::after{
-            transform: rotate(0deg);
-        }
-        
+                &__column{
+                    cursor: pointer;
+                }
+                &__column._init {
+                
+                
+                }
+                &__column._init {
+                    padding: 10px 40px 10px 10px;
+                }
+                // &__column._init .nav-spoller::before,
+                &__column._init .nav-spoller::after {
+                    content: '';
+                    color: $red-color;
+                    position: absolute;
+                    transform: translateY(-50%) rotate(225deg);
+                    border-width: 2px 0px 0px 2px;
+                    border-style: solid;
+                    padding: 5px;
+                    right: 10px;
+                    top: 20px;
+                    transition: transform 0.3s ease 0s;
+                }
+                // &__list {
+                //     display: flex;
+                //     flex-flow: column wrap;
+                // }
+            }
 }

@@ -1,4 +1,5 @@
-@import "variables";
+@import "_variables";
+@import "_breakpoints";
 
 *::before,
 *::after {
@@ -45,7 +46,15 @@ body {
 
 .content {
   padding: 0 150px;
+
+  @include desktop {
+    padding: 0 20px;
+  }
+  @include tablet {
+    padding: 12px;
+  }
 }
+
 
 ul,
 ol {

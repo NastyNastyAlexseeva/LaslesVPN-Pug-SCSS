@@ -7,8 +7,14 @@
     background-color: #FFF;
     margin: 185px 150px -110px 0px;
     z-index: 2;
-
-
+    
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 80px;
+        position: relative;
+    }
 
     .banner {
         height: 233px;
@@ -16,6 +22,16 @@
         justify-content: space-between;
         align-items: center;
         padding: 0px 50px 0px 50px;
+
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            padding: 32px;
+            word-wrap: break-word;
+        }
         
 
         &__title {
@@ -40,6 +56,9 @@
             border-radius: 10px;
             width: 250px;
             height: 60px;
+            @include tablet {
+                width: 241px;
+            }
             
             &__:hover {
                 box-shadow: 0px 15px 20px rgba(245, 56, 56, 0.35);

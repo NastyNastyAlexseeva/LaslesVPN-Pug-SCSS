@@ -4,7 +4,9 @@
 .columns {
     padding: 207px 174px 0px 175px;
     background-color: rgba(248, 248, 248, 0) 100%;
-
+    @include tablet{
+        padding: 100px 0px;
+    }
     &__title{
         text-align: center;
         line-height: 50px;
@@ -25,6 +27,7 @@
         flex-grow: 1;
         margin-bottom: 150px;
         
+        
         .column{
             display: flex;
             flex-wrap: wrap;
@@ -34,6 +37,12 @@
             min-width: 330px;
             min-height: 760px;
             margin-right: 50px;
+            @include tablet {
+                display: flex;
+                flex-basis: 33.33333%;
+                flex-grow: 1;
+            }
+        
             
             &:hover{
                 border: 2px solid $red-color;

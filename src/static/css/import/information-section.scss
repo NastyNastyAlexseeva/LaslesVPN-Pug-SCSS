@@ -6,6 +6,12 @@
     justify-content: space-between;
     align-items: flex-end;
 
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     &__image {
             max-width: 508px;
         img {
