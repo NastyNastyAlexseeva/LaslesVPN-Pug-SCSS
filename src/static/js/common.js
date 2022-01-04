@@ -32,8 +32,20 @@ const swiper = new Swiper('.swiper', {
     mousewheel: {
         sensitivity: 1,
     },
-    
-});
+	  // Responsive breakpoints
+		breakpoints: {
+		// when window width is >= 335px
+		335: {
+			slidesPerView: 1.4,
+			spaceBetween: 18
+		},
+		// when window width is >= 480px
+		480: {
+			slidesPerView: 2,
+			spaceBetween: 30
+		},
+		}
+	});
 
 // burger
 

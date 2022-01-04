@@ -1,12 +1,17 @@
 .swiper__container{
-	
 	margin-top: 124px;
 	width: 120%;
 	height: 590px;
 	position: relative;
 	padding-right: 0px;
 
-	
+
+	@include tablet {
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		margin-top: 80px;
+	}
 	.swiper__title{
 		margin-bottom: 20px;
 		text-align: center;
@@ -14,13 +19,14 @@
 	.swiper__subtitle{
 		margin-bottom: 60px;
 		text-align: center;
+		@include tablet {
+			margin-bottom: 32px;
+		}
 	}
 	.swiper {
 		width: 100%;
-		
 	.swiper-slide {
 			padding: 30px;
-
 			&-active{
 				border: 2px solid $red-color;			
 			}
@@ -29,42 +35,40 @@
 			border: 2px solid #DDDDDD;
 			border-radius: 10px;
 			box-sizing: border-box;
-
+			@include tablet {
+				width: 280px;
+				height: 303px;
+				padding: 20px;
+				
+			}
 			.review{
 				display: flex;
 				justify-content: space-between;
 				flex-wrap: wrap;
-
-			
 			&__name {
 				text-align: left;
 				font-size: 18px;
 			}
-
 			&__subname {
 				text-align: left;
 				font-size: 14px;
 			}
-
 			&__image {
 				object-fit: cover; 
 				width: 50px;
 				height: 50px;
 				float: left;
 				margin-right: 20px;
-
 				img {
 					
-
 				}
 			}
 			&__rating{
-
 			}
+			
 		}
 		
 	}
-
 			.text {
 				line-height: 30px;
 				font-size: 16px;
@@ -72,7 +76,6 @@
 				color: #0B132A;
 			}
 		}
-
 }
 
 .swiper-nav{
@@ -80,18 +83,20 @@
 	display: flex;
 	margin-top: -150px;
 	color: white;
-
-	
+	@include tablet {
+		margin-top: 32px;
+	}
 	.swiper-button-prev-custom {
 		border: 2px solid $red-color;
 		width: 60px;
 		height: 60px;
 		border-radius: 50%;
 		cursor: pointer;
-		margin-right: 20px;
+		margin-right: 10px;
 		position: relative;
-		
-
+		&:hover{
+			background: $red-color;
+		}
 		.left-arrow{
 			&::before,
 			&::after {
@@ -101,13 +106,12 @@
 			left: 50%;
 			transform: translate(-50%, -50%)rotate(90deg);
 			}
-
 		&::before{
 			width: 5px;
 			height: 35px;
-			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
+			border-radius: 30px;
 			background-color: $red-color;
+			cursor: pointer;
 		}
 		&::after{
 			width: 15px;
@@ -116,12 +120,13 @@
 			border-top: 5px solid $red-color;
 			border-left: 5px solid  $red-color;
 		}
-		
-	}
-	&:hover{
-		box-shadow: 15px rgba(245, 56, 56, 0.35);
-		transition-delay: 0.1s;
-		background-color: $red-color;
+		&:hover:before{
+			background-color: #ffffff;
+		}
+		&:hover:after {
+			border-top: 5px solid #ffffff;
+			border-left: 5px solid  #ffffff;
+		}
 	}
 }
 
@@ -130,10 +135,11 @@
 		width: 60px;
 		height: 60px;
 		border-radius: 50%;
-		color: $red-color;
 		cursor: pointer;
 		position: relative;
-
+		&:hover{
+			background: $red-color;
+		}
 		.right-arrow {
 			&::before,
 			&::after {
@@ -143,27 +149,27 @@
 				left: 50%;
 				transform: translate(-50%, -50%)rotate(90deg);
 			}
-
 			&::before{
 				width: 5px;
 				height: 35px;
-				border-top-left-radius: 3px;
-				border-top-right-radius: 3px;
+				border-radius: 30px;
 				background-color: $red-color;
 			}
 			&::after{
 				width: 15px;
 				height: 15px;
-				transform: translate(40%, -50%) rotate(135deg);
+				transform: translate(33%, -50%) rotate(135deg);
 				border-top: 5px solid $red-color;
 				border-left: 5px solid  $red-color;
 			}
+			&:hover:before{
+				background-color: #ffffff;
+			}
+			&:hover:after {
+				border-top: 5px solid #ffffff;
+				border-left: 5px solid  #ffffff;
+			}
 			
-		}
-		&:hover{
-			box-shadow: 15px rgba(245, 56, 56, 0.35);
-			transition-delay: 0.1s;
-			background-color: $red-color;
 		}
 	}
 
@@ -173,7 +179,6 @@
 			width: 15px;
 			height: 15px;
 		}
-
 		.swiper-pagination-bullet-active {
 			background-color: $red-color;
 			width: 45px;

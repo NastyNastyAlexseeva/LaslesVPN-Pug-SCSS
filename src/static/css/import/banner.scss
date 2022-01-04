@@ -11,9 +11,11 @@
     @include tablet {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         width: 100%;
         margin-top: 80px;
         position: relative;
+        height: 100%;    
     }
 
     .banner {
@@ -38,6 +40,10 @@
             font-size: 35px;
             line-height: 45px;
             width: 370px;
+            @include tablet {
+                font-size: 28px;
+                width: auto;
+            }
 
 
         }

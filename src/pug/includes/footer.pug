@@ -18,9 +18,7 @@ include mixins.pug
                 span ©2020LaslesVPN
         .footer__right
             nav.footer__column(data-spollers ="764,max")
-                .footer__title
-                    span Product
-                button(tabindex="-1" type='button' data-spoller class="nav-spoller")
+                a(tabindex="-1" name='accordion-button' type='button' data-spoller class="footer__nav-spoller") Product
                 +footer__list( [
                 {href: '#', text: 'Download'},
                 {href: '#', text: 'Pricing'},
@@ -30,9 +28,7 @@ include mixins.pug
                 {href: '#', text: 'Blog'}
                 ] )
             nav.footer__column(data-spollers ="764,max")
-                .footer__title
-                    span Engage
-                button(tabindex="-1" type='button' data-spoller class="nav-spoller")
+                a(tabindex="-1" name='accordion-buttons' type='button' data-spoller class="footer__nav-spoller") Engage
                 +footer__list( [ 
                 {href: '#', text: 'LaslesVPN ?'},
                 {href: '#', text: 'FAQ'},
@@ -42,9 +38,7 @@ include mixins.pug
                 {href: '#', text: 'Terms of Service'}
                 ] )
             nav.footer__column(data-spollers ="764,max")
-                .footer__title
-                    span Earn Money
-                button(tabindex="-1" type='button' data-spoller class="nav-spoller")
+                a(tabindex="-1" name='accordion-buttons' type='button' data-spoller class="footer__nav-spoller") Earn Money
                 +footer__list( [ 
                 {href: '#', text: 'Affiliate'},
                 {href: '#', text: 'Become Partner'}

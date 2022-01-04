@@ -30,6 +30,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
                 
 /*проблема с адаптивом картинок*/
                 img {
