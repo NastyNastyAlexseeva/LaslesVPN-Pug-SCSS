@@ -25,9 +25,7 @@ const swiper = new Swiper('.swiper', {
     //     el: '.swiper-scrollbar',
     // },
 
-    slidesPerView: 2.7,
-    spaceBetween: 50,
-    slidesPerGroup: 1,
+    
 
     mousewheel: {
         sensitivity: 1,
@@ -40,9 +38,9 @@ const swiper = new Swiper('.swiper', {
 			spaceBetween: 18
 		},
 		// when window width is >= 480px
-		480: {
-			slidesPerView: 2,
-			spaceBetween: 30
+		1024: {
+			slidesPerView: 2.7,
+			spaceBetween: 50
 		},
 		}
 	});
