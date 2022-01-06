@@ -5,6 +5,8 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-end;
+    max-width: 1140px;
+    flex: 1 0 auto;
 
     @include tablet {
         display: flex;
