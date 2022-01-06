@@ -59,11 +59,55 @@
 .footer-nav {
   margin-top: 13rem;
   background: #f8f8f8;
+  display: grid;
+  grid-template-columns: 57rem 57rem;
+  padding: 0 15rem;
+}
+
+.text-lasless {
+  width: 34rem;
+  height: 6rem;
+  margin: 2rem 0 3rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #4f5665;
+}
+
+.icons {
+  display: flex;
+}
+
+a.icon-footer img {
+  min-width: 7rem;
+  min-height: 7rem;
+  margin-left: -2.5rem;
+  margin-right: 2rem;
+}
+
+.copyright {
+  width: 13rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #afb5c0;
+}
+.info-nav {
   display: flex;
   justify-content: space-between;
 }
 
-.info-nav {
-  display: flex;
-  justify-content: space-between;
+.footer-title_nav {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0b132a;
+  margin-bottom: 2rem;
+}
+
+.nav-item-footer {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #4f5665;
 }
