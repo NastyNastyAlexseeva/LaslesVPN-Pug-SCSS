@@ -4,11 +4,12 @@
 
 .first-text-slider {
   font-weight: 500;
-  font-size: 35px;
-  line-height: 50px;
+  font-size: 3.5rem;
+  line-height: 5rem;
   text-align: center;
   color: #0b132a;
   margin-bottom: 2rem;
+  width: 85%;
 }
 
 .second-text-slider {
@@ -16,6 +17,7 @@
   line-height: 3rem;
   text-align: center;
   color: #4f5665;
+  width: 85%;
 }
 
 .slider-slick {
@@ -25,9 +27,9 @@
 
 .about {
   background: #ffffff;
-  border: 2px solid #dddd;
+  border: 0.2rem solid #dddd;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 1rem;
   width: 40rem;
   height: 23rem;
 }

@@ -3,8 +3,8 @@ mixin statistic(svg, num, name)
     .statistics__item
         .statistics__image
             img( src="img/svg/" + svgName + ".svg" alt="" + svgName)
-        span.statistics__num #{num}
-        span.statistics__name #{name}
+        .statistics__num #{num}
+        .statistics__name #{name}
 
 mixin card(imgHref, title, list, price, link)
     .column-with-plan 
@@ -13,8 +13,7 @@ mixin card(imgHref, title, list, price, link)
         ul.list-plan
             each item in list
                 li.column-item #{item}
-        .plan-price
-            .plan-price-text #{price}
+        .plan-price #{price}
         a.select(href=link) Select
 
 mixin slider-card(imgPhoto, title, subtitle, grade, imgStar, review)

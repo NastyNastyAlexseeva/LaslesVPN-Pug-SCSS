@@ -60,21 +60,19 @@ body {
 }
 
 .control-btn {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
-.control-btn_signin {
+.control-btn_sign {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #0b132a;
   width: 15rem;
   height: 4.5rem;
 }
 
-.control-btn_signup {
-  font-weight: 600;
-  font-size: 16px;
+.control-btn_sign:hover {
   color: #f53855;
   border: 1px solid #f53855;
   width: 15rem;
