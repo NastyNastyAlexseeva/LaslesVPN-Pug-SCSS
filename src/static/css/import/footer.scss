@@ -1,3 +1,69 @@
-p {
-  margin-top: 10rem;
+.footer {
+  margin-top: 25rem;
+  padding-bottom: 50rem;
+  align-items: center;
+}
+
+// верхний блок с текстом и кнопкой
+.first-stage-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15rem;
+  padding-right: 7rem;
+  width: 114rem;
+  height: 23rem;
+  background: #ffff;
+  box-shadow: 0 5rem 13rem rgb(17 19 35 / 15%);
+}
+
+.footer-subscribe {
+  padding-top: 5.85rem;
+  padding-left: 7rem;
+}
+
+.main-text-footer {
+  width: 37rem;
+  height: 8rem;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  font-weight: 500;
+  color: #0b132a;
+}
+
+.second-text-footer {
+  width: 41rem;
+  height: 1.6rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #4f5665;
+}
+
+.red-btn-footer {
+  display: block;
+  color: #ffffff;
+  background-color: #f53838;
+  text-align: center;
+  padding: 1.75rem;
+  width: 25rem;
+  height: 6rem;
+  border-radius: 1rem;
+  margin-top: 8.65rem;
+}
+
+.red-btn-footer:hover {
+  box-shadow: 0 2.5rem 3rem -0.5rem rgba(245, 56, 56, 0.35);
+}
+
+// непосредственно футер с навигацией
+.footer-nav {
+  margin-top: 13rem;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-nav {
+  display: flex;
+  justify-content: space-between;
 }
