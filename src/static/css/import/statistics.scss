@@ -116,3 +116,28 @@
     }
   }
 }
+
+// адаптив
+@media screen and (max-width: 375px) {
+  .statistics {
+    // display: grid;
+    // grid-template-rows: 12rem 12rem 12rem;
+    padding: 0;
+    width: 33.5rem;
+    height: 36rem;
+    margin: 0 2rem 8rem 2rem;
+  }
+  .statistics__image img {
+    width: 1.7rem;
+    height: 1.8rem;
+  }
+  .statistics__image {
+    // width: auto;
+    // height: 5.5rem;
+  }
+  // .statistics__item {
+  // width: 33.3rem;
+  // display: grid;
+  // grid-template-columns: 11.1rem 22.2rem;
+  // }
+}

@@ -46,7 +46,12 @@ body {
 .content {
   padding: 0 0 0 150px;
 }
-
+// адаптив
+@media screen and (max-width: 375px) {
+  .content {
+    padding: 0;
+  }
+}
 ul,
 ol {
   margin: 0;

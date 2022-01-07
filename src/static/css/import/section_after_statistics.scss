@@ -40,3 +40,35 @@ img.check {
   align-items: center;
   margin-bottom: 1.5rem;
 }
+
+// адаптив
+@media screen and (max-width: 375px) {
+  .section_after_statistics {
+    flex-direction: column;
+  }
+  .left-picture {
+    width: 33.5rem;
+    height: 27.4rem;
+    margin: 0 2rem 3rem 2rem;
+  }
+  .first-content {
+    width: 33.5rem;
+    height: 9rem;
+    font-size: 2.8rem;
+    line-height: 160%;
+    margin: 0 2rem 1rem 2rem;
+    font-weight: 600;
+  }
+  .second-content {
+    width: 33.5rem;
+    height: 9rem;
+    margin: 0 2rem 2rem 2rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  .list {
+    margin: 0 2rem 4rem 2rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+}

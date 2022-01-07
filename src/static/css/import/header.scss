@@ -80,3 +80,51 @@ body {
   box-sizing: border-box;
   border-radius: 50px;
 }
+
+// адаптив
+@media screen and (min-width: 376px) {
+  .burger-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    max-width: 37.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    padding: 0;
+    margin: 0 0 2rem;
+    height: 6rem;
+  }
+  .logo {
+    position: absolute;
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .control {
+    display: none;
+  }
+  .burger-btn {
+    width: 27px;
+    height: 27px;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+  img.burger-img {
+    width: 14px;
+    height: 12px;
+  }
+}
