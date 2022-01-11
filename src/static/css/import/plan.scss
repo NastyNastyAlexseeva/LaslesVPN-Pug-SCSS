@@ -1,7 +1,6 @@
 .plan {
   display: flex;
   flex-direction: column;
-
   margin-top: 19rem;
   align-items: center;
 }
@@ -112,17 +111,15 @@
     margin-left: 0;
   }
   .column {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    width: 144rem;
   }
-  .column-with-plan {
+  /*.column-with-plan {
     display: flex;
     flex-direction: column;
     width: 25rem;
     height: 51rem;
     padding-top: 3rem;
-  }
+  }*/
   .column-img {
     width: 8.2rem;
     height: 9.4rem;

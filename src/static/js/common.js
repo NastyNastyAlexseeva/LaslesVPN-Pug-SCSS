@@ -1,8 +1,9 @@
 $(document).ready(function () {
-    // alert(1);
+  
     $(".slider-slick").slick({
         dots: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
+        slidesToScroll: 2,
         speed: 600,
         easing: "linear",
         variableWidth: true,
