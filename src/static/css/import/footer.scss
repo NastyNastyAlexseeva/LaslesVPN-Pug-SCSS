@@ -26,7 +26,7 @@
   height: 8rem;
   font-size: 3.5rem;
   line-height: 4.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #0b132a;
 }
 
@@ -56,6 +56,10 @@
 }
 
 // непосредственно футер с навигацией
+.logo-footer {
+  width: 15rem;
+  height: 3.6rem;
+}
 .footer-nav {
   margin-top: 13rem;
   background: #f8f8f8;
@@ -110,4 +114,144 @@ a.icon-footer img {
   font-size: 1.6rem;
   line-height: 3rem;
   color: #4f5665;
+}
+button.footer-title_nav {
+  padding-left: 0;
+}
+
+// адаптив
+@media screen and (max-width: 375px) {
+  .footer {
+    margin-top: 20rem;
+  }
+  .first-stage-footer {
+    margin: 0;
+    padding: 0 0 0 5rem;
+    display: block;
+    width: 37.5rem;
+    height: 35rem;
+    box-shadow: 0 2rem 5rem rgb(17 19 35 / 20%);
+  }
+  .footer-subscribe {
+    margin: 0;
+    padding: 0;
+  }
+  .main-text-footer {
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 160%;
+    width: 27rem;
+    height: 13.5rem;
+    margin: 3rem 0 1rem;
+  }
+  .second-text-footer {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    width: 27rem;
+    height: 6rem;
+    margin: 0 0 2rem;
+  }
+  .red-btn-footer {
+    margin: 0 0 3rem;
+    width: 24rem;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .info-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Кнопка выпадающего списка */
+  .footer-title_nav {
+    color: #0b132a;
+    font-size: 18px;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+    width: 33.5rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+  .product-nav {
+    position: relative;
+    display: inline-block;
+  }
+  .engage-nav {
+    position: relative;
+    display: inline-block;
+  }
+  .earn-nav {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  /* Ссылки внутри выпадающего списка */
+  .dropdown a {
+    font-size: 16px;
+    line-height: 30px;
+    color: #4f5665;
+  }
+
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  /* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
+  .show {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 37.5rem;
+    background: #f8f8f8;
+    padding-left: 2rem;
+    position: relative;
+  }
+  //стрелка
+  .arr {
+  }
+
+  .arr::after {
+    content: "";
+    display: inline-flex;
+    width: 1rem;
+    height: 1rem;
+    border-top: 0.1rem solid;
+    border-right: 0.1rem solid;
+    transform: rotate(135deg);
+    position: absolute;
+    left: 33rem;
+    top: 0.5rem;
+  }
+  .social-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-footer {
+    margin: 2rem 0 1.5rem 2rem;
+  }
+  .text-lasless {
+    width: 33.5rem;
+    height: 6rem;
+    margin: 0 0 2rem 2rem;
+  }
+  .icons {
+    margin-left: 2rem;
+  }
+  .copyright {
+    margin-left: 2rem;
+  }
 }

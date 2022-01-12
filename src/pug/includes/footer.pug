@@ -1,14 +1,14 @@
 .footer
     .first-stage-footer
         .footer-subscribe 
-            .main-text-footer Subscribe Now for <br>Get Special Features!
+            .main-text-footer Subscribe Now for Get Special Features!
             .second-text-footer Let's subscribe with us and find the fun.
         .footer-button
             a.red-btn-footer(href="#")  Subscribe Now
     
     .footer-nav
         .social-nav 
-            .logo
+            .logo-footer
                 img(src="../img/logo.png", alt="logo")
             .text-lasless <span class="mark">LaslesVPN</span> is a private virtual network that has unique features and has high security.
             .icons 
@@ -18,8 +18,8 @@
             .copyright ©2020LaslesVPN
         .info-nav
             .product-nav 
-                ul.product-nav 
-                    .footer-title_nav Product
+                button(class='footer-title_nav' class='arr' onclick="myFunction()") Product
+                ul(class='dropdown' id='myDropdown')
                     li.nav-item-footer 
                         a(href="").nav-link-footer Download 
                     li.nav-item-footer
@@ -33,8 +33,8 @@
                     li.nav-item-footer
                         a(href="").nav-link-footer Blog 
             .engage-nav 
-                ul.engage-nav 
-                    .footer-title_nav Engage
+                button(class='footer-title_nav' class='arr' onclick="myFunctions()" ) Engage
+                ul(class='dropdown' id='myDropdowns')
                     li.nav-item-footer
                         a(href="").nav-link-footer LaslessVPN? 
                     li.nav-item-footer
@@ -48,8 +48,8 @@
                     li.nav-item-footer
                         a(href="").nav-link-footer Terms of Service
             .earn-nav
-                ul.earn-nav 
-                    .footer-title_nav Earn Money
+                button(class='footer-title_nav' class='arr' onclick="myFunctionz()") Earn Money
+                ul(class='dropdown' id='myDropdownz')
                     li.nav-item-footer
                         a(href="").nav-link-footer Affiliate 
                     li.nav-item-footer
@@ -59,3 +59,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/common.js"></script>
+
