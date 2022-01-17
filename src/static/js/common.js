@@ -71,3 +71,14 @@ function myFunction() {
     }
   }
  
+  //бургер
+  let menuBtn = document.querySelector('.burger-btn');
+  let menu = document.querySelector('.nav');
+  let control = document.querySelector('.control');
+  
+  menuBtn.addEventListener('click', function(){
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+    control.classList.toggle('active');
+  })
+  
